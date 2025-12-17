@@ -4,7 +4,7 @@
 
 Script Python per l'estrazione, filtraggio, normalizzazione, formattazione ed esportazione dei dati relativi ai campioni di League of Legends, tramite API ufficiali dell'azienda Riot Games e scraping di tipo statico.
 
-Il codice è stato volutamente unito in un solo file per mostrare lo script. Realisticamente parlando i singoli blocchi di codice come le classi o la funzione che crea il logger verrebbero inserite in file separati e successivamente, importati come moduli per una miglior scalabilità, manutenzione e leggibilità.
+Il codice è stato volutamente unito in un solo file per mostrare lo script. Realisticamente parlando i singoli blocchi di codice come le classi o la funzione che crea il logger verrebbero inserite in file separati e, successivamente, importati come moduli per una miglior scalabilità, manutenzione e leggibilità.
 
 ## Obiettivi
 

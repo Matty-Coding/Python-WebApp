@@ -1,0 +1,110 @@
+{
+    "czech republic": {
+        "code": "cs_CZ",
+        "language": "Czech"
+    },
+    "greece": {
+        "code": "el_GR",
+        "language": "Greek"
+    },
+    "poland": {
+        "code": "pl_PL",
+        "language": "Polish"
+    },
+    "romania": {
+        "code": "ro_RO",
+        "language": "Romanian"
+    },
+    "hungary": {
+        "code": "hu_HU",
+        "language": "Hungarian"
+    },
+    "united kingdom": {
+        "code": "en_GB",
+        "language": "English"
+    },
+    "germany": {
+        "code": "de_DE",
+        "language": "German"
+    },
+    "spain": {
+        "code": "es_ES",
+        "language": "Spanish"
+    },
+    "italy": {
+        "code": "it_IT",
+        "language": "Italian"
+    },
+    "france": {
+        "code": "fr_FR",
+        "language": "French"
+    },
+    "japan": {
+        "code": "ja_JP",
+        "language": "Japanese"
+    },
+    "korea": {
+        "code": "ko_KR",
+        "language": "Korean"
+    },
+    "mexico": {
+        "code": "es_MX",
+        "language": "Spanish"
+    },
+    "argentina": {
+        "code": "es_AR",
+        "language": "Spanish"
+    },
+    "brazil": {
+        "code": "pt_BR",
+        "language": "Portuguese"
+    },
+    "united states": {
+        "code": "en_US",
+        "language": "English"
+    },
+    "australia": {
+        "code": "en_AU",
+        "language": "English"
+    },
+    "russia": {
+        "code": "ru_RU",
+        "language": "Russian"
+    },
+    "turkey": {
+        "code": "tr_TR",
+        "language": "Turkish"
+    },
+    "republic of the philippines": {
+        "code": "en_PH",
+        "language": "English"
+    },
+    "singapore": {
+        "code": "en_SG",
+        "language": "English"
+    },
+    "thailand": {
+        "code": "th_TH",
+        "language": "Thai"
+    },
+    "viet nam": {
+        "code": "vi_VN",
+        "language": "Vietnamese"
+    },
+    "indonesia": {
+        "code": "id_ID",
+        "language": "Indonesian"
+    },
+    "malaysia": {
+        "code": "zh_MY",
+        "language": "Chinese"
+    },
+    "china": {
+        "code": "zh_CN",
+        "language": "Chinese"
+    },
+    "taiwan": {
+        "code": "zh_TW",
+        "language": "Chinese"
+    }
+}

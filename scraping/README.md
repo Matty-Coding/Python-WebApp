@@ -34,26 +34,30 @@ Scaricare la cartella o clonare repository nella propria cartella di lavoro con 
 git clone https://github.com/Matty-Coding/Python-WebApp
 ```
 
-Creare virtualenv nella cartella di lavoro:
-
+Creare un ambiente virutale nella cartella di lavoro con uno dei seguenti comandi:
 ``` bash
 # con virtualenv (pip install virtualenv) 
-virtualenv <nome virtualenv>
+virtualenv <nome ambiente>
 
 # con venv di python default
-venv <nome virtualenv>
+python -m venv <nome ambiente>
 ```
 
-Installare i pacchetti necessari al funzionamento dello script:
+Attivare l'ambiente virtuale:
+``` bash
+<nome ambiente>\Scripts\activate
+```
+
+Installare i pacchetti necessari al funzionamento dello script nell'ambiente virtuale:
 ``` bash
 pip install -r requirements.txt
 ```
 
 ### Eseguire
 
-Creare un nuovo file nella cartella scraping clonata/scaricata e scrivere il seguente blocco di codice.
+Creare un nuovo file nella cartella scraping clonata/scaricata e scrivere il seguente blocco di codice:
 ``` python
-from scraping.extracting import Extract
+from extracting import Extract
 
 api = Extract()
 api.data_champs_to_json(countries=("italy",))
@@ -65,9 +69,9 @@ Il file di log è consultabile in scraping/logs.
 
 ### Lingua
 
-Per scegliere la lingua in cui scaricare i dati consultare il file [languages.json](/scraping/data/languages.json) situato in scraping/data, in particolar modo la sezione sotto la voce `language`.
+Per scegliere la lingua in cui scaricare i dati, consultare il file [languages.json](/scraping/data/languages.json) situato in scraping/data.
 
-Inserire le lingue desiderate come mostrate nel codice soprastante.
+Inserire uno o più paesi tra quelli disponibili nel file alla voce `country`.
 
 --- 
 
@@ -78,7 +82,11 @@ Di default vengono scaricati i dati relativi all'ultima versione del gioco prese
 Per visualizzare le versioni del gioco utilizzare il metodo `get_versions` senza parametri. 
 Per cambiare la versione sceglierne una e cambiare l'attributo della classe come segue:
 ```python
-api._patch = "15.24.1"
+api = Extract()
+print(api.get_versions()) # restituisce tutte le versioni del gioco
+api._patch = "14.24.1"    # attributo della classe
+
+api.data_champs_to_json(countries=("italy",))  # se esiste il file viene sovrascritto
 ```
 
-Eseguire nuovamente lo script.
+Consigliabile utilizzare patch non troppo datate per il funzionamento completo dello script.

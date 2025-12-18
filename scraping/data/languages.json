@@ -1,110 +1,137 @@
 {
     "czech republic": {
         "code": "cs_CZ",
-        "language": "Czech"
+        "language": "Czech",
+        "country": "Czech Republic"
     },
     "greece": {
         "code": "el_GR",
-        "language": "Greek"
+        "language": "Greek",
+        "country": "Greece"
     },
     "poland": {
         "code": "pl_PL",
-        "language": "Polish"
+        "language": "Polish",
+        "country": "Poland"
     },
     "romania": {
         "code": "ro_RO",
-        "language": "Romanian"
+        "language": "Romanian",
+        "country": "Romania"
     },
     "hungary": {
         "code": "hu_HU",
-        "language": "Hungarian"
+        "language": "Hungarian",
+        "country": "Hungary"
     },
     "united kingdom": {
         "code": "en_GB",
-        "language": "English"
+        "language": "English",
+        "country": "United Kingdom"
     },
     "germany": {
         "code": "de_DE",
-        "language": "German"
+        "language": "German",
+        "country": "Germany"
     },
     "spain": {
         "code": "es_ES",
-        "language": "Spanish"
+        "language": "Spanish",
+        "country": "Spain"
     },
     "italy": {
         "code": "it_IT",
-        "language": "Italian"
+        "language": "Italian",
+        "country": "Italy"
     },
     "france": {
         "code": "fr_FR",
-        "language": "French"
+        "language": "French",
+        "country": "France"
     },
     "japan": {
         "code": "ja_JP",
-        "language": "Japanese"
+        "language": "Japanese",
+        "country": "Japan"
     },
     "korea": {
         "code": "ko_KR",
-        "language": "Korean"
+        "language": "Korean",
+        "country": "Korea"
     },
     "mexico": {
         "code": "es_MX",
-        "language": "Spanish"
+        "language": "Spanish",
+        "country": "Mexico"
     },
     "argentina": {
         "code": "es_AR",
-        "language": "Spanish"
+        "language": "Spanish",
+        "country": "Argentina"
     },
     "brazil": {
         "code": "pt_BR",
-        "language": "Portuguese"
+        "language": "Portuguese",
+        "country": "Brazil"
     },
     "united states": {
         "code": "en_US",
-        "language": "English"
+        "language": "English",
+        "country": "United States"
     },
     "australia": {
         "code": "en_AU",
-        "language": "English"
+        "language": "English",
+        "country": "Australia"
     },
     "russia": {
         "code": "ru_RU",
-        "language": "Russian"
+        "language": "Russian",
+        "country": "Russia"
     },
     "turkey": {
         "code": "tr_TR",
-        "language": "Turkish"
+        "language": "Turkish",
+        "country": "Turkey"
     },
     "republic of the philippines": {
         "code": "en_PH",
-        "language": "English"
+        "language": "English",
+        "country": "Republic of the Philippines"
     },
     "singapore": {
         "code": "en_SG",
-        "language": "English"
+        "language": "English",
+        "country": "Singapore"
     },
     "thailand": {
         "code": "th_TH",
-        "language": "Thai"
+        "language": "Thai",
+        "country": "Thailand"
     },
     "viet nam": {
         "code": "vi_VN",
-        "language": "Vietnamese"
+        "language": "Vietnamese",
+        "country": "Viet Nam"
     },
     "indonesia": {
         "code": "id_ID",
-        "language": "Indonesian"
+        "language": "Indonesian",
+        "country": "Indonesia"
     },
     "malaysia": {
         "code": "zh_MY",
-        "language": "Chinese"
+        "language": "Chinese",
+        "country": "Malaysia"
     },
     "china": {
         "code": "zh_CN",
-        "language": "Chinese"
+        "language": "Chinese",
+        "country": "China"
     },
     "taiwan": {
         "code": "zh_TW",
-        "language": "Chinese"
+        "language": "Chinese",
+        "country": "Taiwan"
     }
 }

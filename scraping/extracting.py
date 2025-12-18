@@ -374,6 +374,7 @@ class Extract(LeagueAPI):
                 json_dict[lang.get("country").lower()] = {
                     "code": lang.get("code"),
                     "language": lang.get("lang"),
+                    "country": lang.get("country")
                 }
 
             self._logger.info("ℹ️ Creazione JSON delle lingue in corso...")
@@ -408,7 +409,8 @@ class Extract(LeagueAPI):
 
         for lang in countries:
             lang_name = lang_data[lang].get("language").lower()
-            filename = f"{lang_name.replace(' ', '_')}_data.json"
+            country = lang_data[lang].get("country").lower()
+            filename = f"{country}_data.json"
 
             json_champ_path = json_champ_folder / filename
 
@@ -489,4 +491,4 @@ if __name__ == "__main__":
     api = Extract()
 
     api.languages_to_json()
-    api.data_champs_to_json(countries=("italy", "united states", "korea"))
+    api.data_champs_to_json(countries=("italy",))

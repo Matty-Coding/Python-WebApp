@@ -7,6 +7,8 @@ from re import match
 
 import logging
 
+from typing import Any
+
 # =========================
 
 # Definizione cartella dati
@@ -94,7 +96,7 @@ class LeagueAPI:
         # Inizializzazione dizionario (caching dati)
         self._champions_data: dict[str, dict] = {}
 
-    def _get(self, url: str) -> dict[str, any]:
+    def _get(self, url: str) -> dict[str, Any]:
         """
         Esegue una `GET` usando la sessione.
         Gestisce gli errori delle richieste e restituisce `JSON`.

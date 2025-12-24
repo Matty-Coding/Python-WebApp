@@ -1,4 +1,4 @@
-# Database - Server - Sessioni - Sicurezza 
+# Flask Backend con Autenticazione, Limiti richieste e Sicurezza
 
 ## Descrizione
 

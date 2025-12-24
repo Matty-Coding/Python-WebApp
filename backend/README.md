@@ -66,7 +66,8 @@ Backend completo, sicuro e funzionale.
 - Sessioni gestite con facilità sfruttando i pacchetti esistenti approfondendo e configurando il tutto.
 - Sicurezza per difendere il server dagli attacchi più comuni integrando e facendo coesistere diverse tecnologie.
 
-Il progetto presenta alcuni punti volutamente non utilizzati, come l'autenticazione dell'utente tramite mail e il reset della password, presentano lo stesso sviluppo, ridondante per un progetto di sola presentazione.
+Il progetto presenta alcuni punti volutamente non utilizzati, come l'autenticazione dell'utente tramite mail e il reset della password, presentano lo stesso sviluppo e integrarli entrambi risulta ridondante per un una presentazione.
+Ho quindi deciso di sviluppare il reset della password con endpoint dinamico per includere anche quell'argomento.
 
 ## Tecnologie 
 

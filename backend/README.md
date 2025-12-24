@@ -9,7 +9,7 @@ La creazione del database e successivi aggiornamenti vengono effettuati con il p
 
 Progettato interamente con __ORM__ (Object-Relational Mapping), in particolare `SQLAlchemy` integrato ai pacchetti del Framework in uso per questo progetto, `Flask`. 
 
-Il database ha la seguente struttura [Struttura Database](/app/database/db_structure.svg).
+Il database ha la seguente struttura [apri immagine](/app/database/db_structure.svg).
 
 La tabella _sessions_ è interamente gestista da `Flask-Session`, le altre sono create tramite `Flask-SQLAlchemy`.
 Presentano delle relazioni tra loro e la gestione degli utenti è strettamente collegata grazie al pacchetto `Flask-Login` e la sua classe `UserMixin`.
@@ -114,6 +114,8 @@ Installare i pacchetti necessari al funzionamento dello script nell'ambiente vir
 ``` bash
 pip install -r requirements.txt
 ```
+
+Creare file `.env` con i relativi dati annessi come mostrato nel file [`.env.sample`](/backend/.env.sample).
 
 Inizializzare il database:
 ``` bash

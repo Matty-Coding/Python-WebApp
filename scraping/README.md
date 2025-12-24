@@ -19,12 +19,12 @@ Lo script è pensato per essere utilizzato poche volte e in modo completo, per q
 
 ## Tecnologie 
 
-- requests
-- BeautifulSoup
-- logging 
-- pathlib 
-- json
-- re
+- `requests`
+- `BeautifulSoup`
+- `logging` 
+- `pathlib` 
+- `json`
+- `re`
 
 ## Come usarlo
 
@@ -34,7 +34,7 @@ Scaricare la cartella o clonare repository nella propria cartella di lavoro con 
 git clone https://github.com/Matty-Coding/Python-WebApp
 ```
 
-Creare un ambiente virtuale nella cartella di lavoro con uno dei seguenti comandi:
+Creare un ambiente virtuale nella cartella `scraping` con uno dei seguenti comandi:
 ``` bash
 # con virtualenv (pip install virtualenv) 
 virtualenv <nome ambiente>
@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 ### Eseguire
 
-Creare un nuovo file nella cartella scraping clonata/scaricata e scrivere il seguente blocco di codice:
+Creare un nuovo file nella cartella e scrivere il seguente blocco di codice:
 ``` python
 from extracting import Extract
 
@@ -63,7 +63,7 @@ api = Extract()
 api.data_champs_to_json(countries=("italy",))
 ```
 
-Il file di log è consultabile in scraping/logs.
+Il file di log è consultabile nella cartella `logs`.
 
 ---
 

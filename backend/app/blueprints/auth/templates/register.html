@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Register Page
+{% endblock %}
+
+{% block content %}
+  
+  <h1 class="text-center mb-5">Sign Up to access the server!</h1>
+
+  <form action="{{ url_for('auth.register') }}" method="post" novalidate>
+    {{ form.hidden_tag() }} {# csrf token in hidden field #}
+
+    <div class="p-2">
+      <div class="form-floating">
+        {{ form.username(class="form-control") }}
+        {{ form.username.label }}
+      </div>
+
+      {% if form.username.errors %}
+        {% for error in form.username.errors %}
+          <div class="form-text text-bg-danger rounded-2 text-center py-1">{{ error }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="p-2">
+      <div class="form-floating">
+        {{ form.email(class="form-control") }}
+        {{ form.email.label }}
+      </div>
+
+      {% if form.email.errors %}
+        {% for error in form.email.errors %}
+          <div class="form-text text-bg-danger rounded-2 text-center py-1">{{ error }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="p-2">
+      <div class="form-floating">
+        {{ form.password(class="form-control") }}
+        {{ form.password.label }}
+      </div>
+
+      {% if form.password.errors %}
+        {% for error in form.password.errors %}
+          <div class="form-text text-bg-danger rounded-2 text-center py-1">{{ error }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="p-2">
+      <div class="form-floating">
+        {{ form.confirm_password(class="form-control") }}
+        {{ form.confirm_password.label }}
+      </div>
+
+      {% if form.confirm_password.errors %}
+        {% for error in form.confirm_password.errors %}
+          <div class="form-text text-bg-danger rounded-2 text-center py-1">{{ error }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="text-center mt-3">
+      {{ form.submit(class="btn btn-outline-light") }}
+    </div>
+  </form>
+
+
+{% endblock %}

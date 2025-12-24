@@ -1,0 +1,6 @@
+.env 
+venv 
+instance
+*.drawio
+__pycache__
+migrations

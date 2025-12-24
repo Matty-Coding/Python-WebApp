@@ -43,8 +43,7 @@ def get_logger(name: str) -> logging.Logger:
         log_file = LOG_DIR / f"{name}.log"
 
         # Definizione handler per il file (log di tutto, sovrascritto ogni volta)
-        file_handler = logging.FileHandler(
-            log_file, mode="w", encoding="utf-8")
+        file_handler = logging.FileHandler(log_file, mode="w", encoding="utf-8")
         file_handler.setLevel(logging.DEBUG)
 
         # Definizione handler per la console (solo errori e superiori)
@@ -158,12 +157,10 @@ class LeagueAPI:
 
             # Ricerca tabella con header "code" e "language"
             for table in tables:
-                headers = [th.get_text(strip=True).lower()
-                           for th in table.select("th")]
+                headers = [th.get_text(strip=True).lower() for th in table.select("th")]
 
                 if "code" in headers and "language" in headers:
-                    rows = [tr.get_text(strip=True)
-                            for tr in table.select("tr")][1:]
+                    rows = [tr.get_text(strip=True) for tr in table.select("tr")][1:]
                     pattern = r"^(?P<code>[a-z_A-Z]{5})(?P<lang>[a-zA-Z]+) \((?P<country>[a-z A-Z]+)\)$"
 
                     # Estrazione informazioni (esclusione dati non aggiornati)
@@ -245,8 +242,7 @@ class LeagueAPI:
                     ).get_text(),
                 }
 
-            self._logger.info(
-                f"✔️ Informazioni sulle abilità di {champ_id} scaricate.")
+            self._logger.info(f"✔️ Informazioni sulle abilità di {champ_id} scaricate.")
             champ_abilities.append((champ_id, abilities_dict))
 
         self._logger.info(f"✅ Abilità scaricate.")
@@ -292,8 +288,7 @@ class LeagueAPI:
             for spell_url, ability in zip(icon_spell_ids_url, abilities):
                 icons_dict[f"{ability}_icon"] = spell_url
 
-            self._logger.info(
-                f"✔️ Informazioni sulle icone di {champ_id} scaricate.")
+            self._logger.info(f"✔️ Informazioni sulle icone di {champ_id} scaricate.")
             champ_icons.append((champ_id, icons_dict))
 
         self._logger.info(f"✅ Icone scaricate .")
@@ -316,8 +311,7 @@ class LeagueAPI:
         champ_skins = []
         for champ_id, champ_data in self._champions_data.items():
 
-            skin_ids = [{skin["num"]: skin["name"]}
-                        for skin in champ_data["skins"]]
+            skin_ids = [{skin["num"]: skin["name"]} for skin in champ_data["skins"]]
 
             skins_dict = {}
             for index, skin in enumerate(skin_ids):
@@ -335,8 +329,7 @@ class LeagueAPI:
                         "loading": loading_url,
                     }
 
-            self._logger.info(
-                f"✔️ Informazioni sulle skin di {champ_id} scaricate.")
+            self._logger.info(f"✔️ Informazioni sulle skin di {champ_id} scaricate.")
             champ_skins.append((champ_id, skins_dict))
 
         self._logger.info(f"✅ Skin scaricate.")
@@ -376,7 +369,7 @@ class Extract(LeagueAPI):
                 json_dict[lang.get("country").lower()] = {
                     "code": lang.get("code"),
                     "language": lang.get("lang"),
-                    "country": lang.get("country")
+                    "country": lang.get("country"),
                 }
 
             self._logger.info("ℹ️ Creazione JSON delle lingue in corso...")
@@ -387,8 +380,7 @@ class Extract(LeagueAPI):
             self._logger.info(f"✅ JSON delle lingue creato.")
 
         else:
-            self._logger.info(
-                f"ℹ️ JSON delle lingue già esistente in {json_lang_path}.")
+            self._logger.info(f"ℹ️ JSON delle lingue già esistente in {json_lang_path}.")
 
         return json_lang_path
 
@@ -397,8 +389,7 @@ class Extract(LeagueAPI):
         Estrazione dati dei campioni ed esportazione in un file `JSON`
         """
 
-        self._logger.info(
-            "ℹ️ Caricamento JSON di informazioni sulle lingue in corso...")
+        self._logger.info("ℹ️ Caricamento JSON di informazioni sulle lingue in corso...")
         with open(self.languages_to_json(), "r", encoding="utf-8") as json_lang:
             lang_data = loads(json_lang.read())
 
@@ -439,8 +430,7 @@ class Extract(LeagueAPI):
             skins = self.get_skins()
             # tupla con tuple di dict delle skins
             # chiavi di ogni dict -> (name, splash, loading)
-            champ_skins = tuple([tuple(element[1].values())
-                                for element in skins])
+            champ_skins = tuple([tuple(element[1].values()) for element in skins])
 
             self._logger.info(f"✔️ Informazioni in ({lang_name}) scaricate.")
 

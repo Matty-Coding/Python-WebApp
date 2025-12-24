@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Block Page
+{% endblock %}
+
+{% block content %}
+
+  <h1 class="text-center mb-5">429 - Too Many Requests</h1>
+  <h3 class="text-center">
+    You have made too many requests
+  </h3>
+
+  <p class="text-center mt-5">You can try again in: <span id="timer">{{ retry_after }}</span> seconds.</p>
+
+  <script src="{{ url_for('static', filename='timer.js') }}"></script>
+  
+
+{% endblock %}

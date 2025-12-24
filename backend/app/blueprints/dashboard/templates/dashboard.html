@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Dashboard Protetta
+{% endblock %}
+
+{% block content %}
+
+  <h1 class="text-center p-5">Dashboard Protetta</h1>
+  <h2>Benvenuto {{ current_user.username }}!</h2>
+  <p>
+    Se visualizzi questa pagina hai eseguito l'accesso correttamente.
+  </p>
+  {% endblock %}

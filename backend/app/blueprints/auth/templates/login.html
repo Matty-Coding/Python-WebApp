@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Login Page
+{% endblock %}
+
+{% block content %}
+  
+  <h1 class="text-center mb-5">Welcome back! Please Sign In</h1>
+
+  <form action="{{ url_for('auth.login') }}" method="post" novalidate>
+    {{ form.hidden_tag() }} {# csrf token in hidden field #}
+
+    <div class="p-2">
+      <div class="form-floating">
+        {{ form.email(class="form-control") }}
+        {{ form.email.label }}
+      </div>
+
+      {% if form.email.errors %}
+        {% for error in form.email.errors %}
+          <div class="form-text text-bg-danger rounded-2 text-center py-1">{{ error }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="p-2">
+      <div class="form-floating">
+        {{ form.password(class="form-control") }}
+        {{ form.password.label }}
+      </div>
+
+      {% if form.password.errors %}
+        {% for error in form.password.errors %}
+          <div class="form-text text-bg-danger rounded-2 text-center py-1">{{ error }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="text-center mt-2">
+      <a href="{{ url_for('auth.reset_password_request') }}" class="text-white">Forgot Password?</a>
+    </div>
+
+    <div class="form-check p-2 d-flex gap-2 align-items-start justify-content-end">
+      {{ form.remember(class="form-check-input") }}
+      {{ form.remember.label(class="form-check-label") }}
+    </div>
+
+    <div class="text-center mt-3">
+      {{ form.submit(class="btn btn-outline-light") }}
+    </div>
+  </form>
+
+
+{% endblock %}

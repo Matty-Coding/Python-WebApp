@@ -34,7 +34,7 @@ Scaricare la cartella o clonare repository nella propria cartella di lavoro con 
 git clone https://github.com/Matty-Coding/Python-WebApp
 ```
 
-Creare un ambiente virtuale nella cartella `scraping` con uno dei seguenti comandi:
+Creare un ambiente virtuale nella cartella `scripting` con uno dei seguenti comandi:
 ``` bash
 # con virtualenv (pip install virtualenv) 
 virtualenv <nome ambiente>

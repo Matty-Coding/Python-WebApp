@@ -402,7 +402,7 @@ class Extract(LeagueAPI):
 
         for lang in countries:
             lang_name = lang_data[lang].get("language").lower()
-            country = lang_data[lang].get("country").lower()
+            country = lang_data[lang].get("country").replace(" ", "_").lower()
             filename = f"{country}_data.json"
 
             json_champ_path = json_champ_folder / filename

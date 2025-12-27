@@ -12,11 +12,11 @@ from typing import Any
 # =========================
 
 # Definizione cartella dati
-DATA_PATH = Path("data")
+DATA_PATH = Path("scraping/data")
 DATA_PATH.mkdir(exist_ok=True)
 
 # Definizione cartella di log
-LOG_DIR = Path("logs")
+LOG_DIR = Path("scraping/logs")
 LOG_DIR.mkdir(exist_ok=True)
 
 

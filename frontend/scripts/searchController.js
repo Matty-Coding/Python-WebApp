@@ -120,7 +120,7 @@ class SearchController {
         if (!card) return;
     
         this.clearSelectedCards();
-        // card.classList.add("selected");
+        card.classList.add("selected");
     
         card.scrollIntoView({
             behavior: "smooth",

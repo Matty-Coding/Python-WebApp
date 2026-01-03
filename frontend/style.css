@@ -270,9 +270,9 @@ input[type="search"]::placeholder {
     border: 1px solid var(--text-color);
 }
 
-/* .selected {
+.selected {
     box-shadow: 0 0 10px springgreen;
-} */
+}
 
 .card:hover {
     cursor: pointer;
@@ -596,7 +596,6 @@ figcaption {
         height: 600px;
     }
 }
-
 
 @media (min-width:1560px) {
     :root {

@@ -49,7 +49,7 @@ Infine le abilità sono caricate utilizzando degli _accordion_ per mostrare ulte
     - `CSS`: utilizzo di variabili per gestire facilmente colori/dimensioni uniformate per tutta la pagina, evitare di scrivere regole che di default risulterebbero identiche.
     - `JavaScript`: Centralizzare le varie logiche in delle _classi_ da cui parte tutto.
 
-- Creare un _Layout_ di tipo _Responsive_ seguento un approccio _Mobile First_, utilizzando `CSS` puro, senza utilizzo di Framework se non per il caricamento delle icone tramite [`Bootstrap Icon`](https://icons.getbootstrap.com/), importato via `CDN`.
+- Creare un _Layout_ di tipo _Responsive_ seguendo un approccio _Mobile First_, utilizzando `CSS` puro, senza utilizzo di Framework se non per il caricamento delle icone tramite [`Bootstrap Icon`](https://icons.getbootstrap.com/), importato via `CDN`.
 - Importare un _font_ specifico preso dal servizio [`Google Fonts`](https://fonts.google.com/) per usarlo in tutta la pagina, per separare la logica ho deciso di importarlo direttamente nel file [_style.css_](/frontend/style.css) ed applicarlo poi a tutta la pagina.
 - Utilizzare _OOP_ in `JavaScript` e diversi file per sezionare le interazioni necessarie al funzionamento completo della pagina. Implementazione di mobilità tramite `keyboard` e `touch` per semplificare l'interazione dell'utente.
 - Ottimizzare le risorse utilizzando metodi di _storage_ (`sessionStorage` in questo caso), `CustomEvent` per comunicare le risposte di `async function`e quando sfruttare `Event Delegation` per evitare di aggiungere dei _Listener_ ovunque.
@@ -63,4 +63,4 @@ Infine le abilità sono caricate utilizzando degli _accordion_ per mostrare ulte
 
 ## Come usarlo
 
-Visitare il sito 
+Visitare il sito [Frontend-Project](https://matty-coding.github.io/Aphelyah/)

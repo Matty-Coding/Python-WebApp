@@ -16,7 +16,7 @@ Entrambi garantiscono _privacy_ e _sicurezza_ poichè i link portano a delle pag
 
 Gli `<script>` vengono importati come file esterni con l'attributo `defer`, esso garantisce che vengano eseguiti in modo parallelo al _loading_ del DOM evitando che i vari `querySelector` non trovino gli elementi.
 
-La pagina presenta la possibilità di interagire in vario modo; tema dark (default) e light, filtri di ricerca, panelli informativi, il tutto ottimizzato su ogni fronte da cui deriva un'esperienza `UI`/`UX` coinvolgente, fluida e gradevole.
+La pagina presenta la possibilità di interagire in vario modo; tema dark (default) e light, filtri di ricerca, pannelli informativi, il tutto ottimizzato su ogni fronte da cui deriva un'esperienza `UI`/`UX` coinvolgente, fluida e gradevole.
 
 I dati sono disposti in un template di tipo `grid`, ogni campione ha una _card_ personalizzata con cui può interagire per visualizzare un ulteriore pannello.
 

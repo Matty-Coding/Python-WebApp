@@ -54,8 +54,6 @@ class PanelController {
                 }
             }
         });
-
-        document.addEventListener("selectedCardClosed", () => this.close());
     }
 
     open() {
@@ -157,7 +155,7 @@ class PanelController {
         buttonClose.addEventListener("click", () => this.close());
 
         const closeBtn = document.createElement("i");
-        closeBtn.className = "bi bi-x-lg";
+        closeBtn.className = "bi bi-chevron-compact-down";
 
         buttonClose.appendChild(closeBtn);
         this.panel.appendChild(buttonClose);

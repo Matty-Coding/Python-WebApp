@@ -120,11 +120,12 @@ class SearchController {
         if (!card) return;
     
         this.clearSelectedCards();
-        card.classList.add("selected");
+        // card.classList.add("selected");
     
         card.scrollIntoView({
             behavior: "smooth",
-            block: "center"
+            block: "nearest",
+            inline: "center"
         });
 
         const ids = [...this.cardsContainer.children].map(card => card.dataset.id)

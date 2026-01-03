@@ -466,6 +466,8 @@ figcaption {
 }
 
 .ability-item {
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     align-items: center;
     gap: 1rem;

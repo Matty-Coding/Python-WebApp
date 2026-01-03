@@ -40,7 +40,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Inter", sans-serif;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     gap: 1rem;
     background-color: var(--bg-color);

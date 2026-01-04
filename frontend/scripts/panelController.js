@@ -35,9 +35,11 @@ class PanelController {
             if (this.isOpen) {
                 switch (e.key) {
                     case "ArrowLeft":
+                        e.preventDefault();
                         this.prevSkin();
                         break;
                     case "ArrowRight":
+                        e.preventDefault();
                         this.nextSkin();
                         break;
                     case "ArrowUp":
@@ -68,7 +70,7 @@ class PanelController {
 
     requestData() {
         document.dispatchEvent(
-            new CustomEvent("dataRequest", { detail: {id: this.currentID} })
+            new CustomEvent("dataRequest", { detail: { id: this.currentID } })
         )
     }
 
@@ -122,7 +124,7 @@ class PanelController {
         if (activeDot && container) {
             const containerCenter = container.offsetWidth / 2;
             const dotCenter = activeDot.offsetLeft + activeDot.offsetWidth / 2;
-        
+
             container.scrollTo({
                 left: dotCenter - containerCenter,
                 behavior: "smooth"
@@ -191,7 +193,7 @@ class PanelController {
         img.alt = `${this.champ.name} default skin`;
         img.loading = "lazy";
         figure.appendChild(img);
-        
+
         figcaption.textContent = this.champ.name;
         figure.appendChild(figcaption);
 
@@ -217,7 +219,7 @@ class PanelController {
                 indicator.className = "bi bi-dash-lg";
                 indicators.appendChild(indicator);
                 continue;
-            } 
+            }
             indicator.className = "bi bi-dash";
             indicators.appendChild(indicator);
         }
@@ -242,7 +244,7 @@ class PanelController {
         })
 
         details.appendChild(carousel);
-        
+
         // Contenitore del nome con frecce direzionali
         const header = document.createElement("div");
         header.classList.add("panel-header");
@@ -251,7 +253,7 @@ class PanelController {
         buttonArrowLeftChamp.type = "button";
         buttonArrowLeftChamp.classList.add("arrow-button");
 
-        if (this.ids.indexOf(this.currentID) === 0) 
+        if (this.ids.indexOf(this.currentID) === 0)
             buttonArrowLeftChamp.classList.add("not-allowed");
         buttonArrowLeftChamp.addEventListener("click", () => this.prevChamp());
 
@@ -270,12 +272,12 @@ class PanelController {
 
         nameContainer.appendChild(name);
         nameContainer.appendChild(nickname);
-  
+
         const buttonArrowRightChamp = document.createElement("button");
         buttonArrowRightChamp.type = "button";
         buttonArrowRightChamp.classList.add("arrow-button");
 
-        if (this.ids.indexOf(this.currentID) === this.ids.length - 1) 
+        if (this.ids.indexOf(this.currentID) === this.ids.length - 1)
             buttonArrowRightChamp.classList.add("not-allowed");
         buttonArrowRightChamp.addEventListener("click", () => this.nextChamp());
 
@@ -284,7 +286,7 @@ class PanelController {
         buttonArrowRightChamp.appendChild(arrowRightChamp);
 
         header.appendChild(buttonArrowLeftChamp);
-        header.appendChild(nameContainer);      
+        header.appendChild(nameContainer);
         header.appendChild(buttonArrowRightChamp);
 
         details.appendChild(header);
@@ -307,10 +309,10 @@ class PanelController {
         for (const [key, ability] of Object.entries(this.champ.abilities)) {
             const li = document.createElement("li");
             li.classList.add("ability-item");
-            
+
             const iconDiv = document.createElement("div");
             iconDiv.classList.add("icon-ability-container");
-            
+
             const icon = document.createElement("img");
             icon.src = ability.icon;
             icon.alt = key;
@@ -319,20 +321,20 @@ class PanelController {
 
             const abilityText = document.createElement("div");
             abilityText.classList.add("ability-text");
-            
+
             const abilityTitle = document.createElement("h3");
             abilityTitle.textContent = `${ability.name} ~ ${key.charAt(0).toUpperCase() + key.slice(1)}`;
-        
+
             const abilityDescription = document.createElement("p");
             abilityDescription.classList.add("ability-description");
             abilityDescription.textContent = ability.description;
 
             abilityText.appendChild(abilityTitle);
             abilityText.appendChild(abilityDescription);
-            
+
             li.appendChild(iconDiv);
             li.appendChild(abilityText);
-            
+
             ul.appendChild(li);
         }
 

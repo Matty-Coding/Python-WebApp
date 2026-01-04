@@ -356,7 +356,7 @@ input[type="search"]::placeholder {
 }
 
 .skin-container {
-    flex-grow: 1;
+    width: 100%;
 }
 
 .skin-container img {
@@ -602,6 +602,10 @@ figcaption {
         --font-size-page: 21px;
     }
 
+    #cards-container {
+        max-width: 1400px;
+    }
+
     .panel {
         height: 720px;        
     }
@@ -618,7 +622,7 @@ figcaption {
     }
 
     .panel {
-        height: 750px;
+        height: 85%;
     }
 
     .carousel .arrow-button:first-of-type {

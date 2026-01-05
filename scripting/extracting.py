@@ -12,11 +12,11 @@ from typing import Any
 # =========================
 
 # Definizione cartella dati
-DATA_PATH = Path("scraping/data")
+DATA_PATH = Path("scripting/data")
 DATA_PATH.mkdir(exist_ok=True)
 
 # Definizione cartella di log
-LOG_DIR = Path("scraping/logs")
+LOG_DIR = Path("scripting/logs")
 LOG_DIR.mkdir(exist_ok=True)
 
 
@@ -483,4 +483,4 @@ if __name__ == "__main__":
     api = Extract()
 
     api.languages_to_json()
-    api.data_champs_to_json(countries=("italy",))
+    api.data_champs_to_json(countries=("korea",))
